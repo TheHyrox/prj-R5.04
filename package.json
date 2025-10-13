@@ -1,0 +1,17 @@
+{
+    "name": "code-quality-testing-evaluation",
+    "version": "1.0.0",
+    "private": true,
+    "workspaces": [
+        "packages/*"
+    ],
+    "scripts": {
+        "start": "concurrently \"npm run start --workspace=backend\" \"npm run start --workspace=frontend\"",
+        "dev": "concurrently \"npm run dev --workspace=backend\" \"npm run start --workspace=frontend\"",
+        "test": "npm run test --workspaces --if-present",
+        "lint": "npm run lint --workspaces --if-present"
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.2"
+    }
+}

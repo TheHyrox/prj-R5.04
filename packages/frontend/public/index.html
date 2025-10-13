@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Management System</title>
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width" />
+
+  <meta name="description" content="A web application" />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial;
+      background-color: #f5f5f5;
+    }
+
+    #root {
+      min-height: 100vh;
+    }
+
+    .loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100vw;
+      color: #666;
+      font-size: 1.2em;
+    }
+
+    .error {
+      color: red;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+
+  <link rel="manifest" href="/manifest.json" />
+
+  <link rel="icon" href="/favicon.ico" />
+</head>
+<body>
+  <noscript>
+    You need JavaScript to run this app.
+  </noscript>
+
+  <div id="root">
+    <div class="loading">
+      Loading Application...
+    </div>
+  </div>
+
+  <div id="error-container" style="display: none;" class="error">
+    An error occurred while loading the application.
+  </div>
+
+  <script>
+    window.onerror = function(msg, url, lineNo, columnNo, error) {
+      console.error('Error: ' + msg + '\nURL: ' + url + '\nLine: ' + lineNo);
+      document.getElementById('error-container').style.display = 'block';
+      return false;
+    };
+  </script>
+</body>
+</html>
