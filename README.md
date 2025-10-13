@@ -6,7 +6,7 @@ You are working for a company that has recently acquired a small e-commerce proj
 ## Git Requirements (Mandatory)
 
 ### 1. Branch Strategy
-- Main branch is protected and cannot be pushed to directly
+- ~~Main branch is protected and cannot be pushed to directly~~
 - Must create the following branches:
   - `feature/eslint-prettier-setup`
   - `feature/testing-setup`
