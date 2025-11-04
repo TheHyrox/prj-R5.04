@@ -75,8 +75,8 @@ Remember to make Prettier and ESLint work together!
 
 ### 2. Git Hooks Setup
 
-- [ ] Install and configure Husky
-- [ ] Configure lint-staged
+- [x] Install and configure Husky
+- [x] Configure lint-staged
 - [ ] Implement pre-commit hooks:
   - Run ESLint
   - Run Prettier
