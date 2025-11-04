@@ -5,3 +5,6 @@ build
 packages/*/node_modules
 coverage
 public
+scripts
+.husky
+
