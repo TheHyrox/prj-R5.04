@@ -75,13 +75,13 @@ Remember to make Prettier and ESLint work together!
 
 ### 2. Git Hooks Setup
 
-- [ ] Install and configure Husky
-- [ ] Configure lint-staged
-- [ ] Implement pre-commit hooks:
+- [x] Install and configure Husky
+- [x] Configure lint-staged
+- [x] Implement pre-commit hooks:
   - Run ESLint
   - Run Prettier
   - Run Jest tests related to changed files
-- [ ] Implement pre-push hooks:
+- [x] Implement pre-push hooks:
   - Run full test suite
   - Check test coverage thresholds
 
