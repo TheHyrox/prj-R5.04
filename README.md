@@ -60,7 +60,7 @@ chore: update eslint configuration
   - No trailing commas
   - 2 spaces indentation
   - 120 characters line length
-- [ ] Install and configure ESLint:
+- [x] Install and configure ESLint:
   - Frontend:
     - Add `eslint-plugin-react` plugin for base React features
     - Add `eslint-plugin-react-hooks` plugin for React hooks best practices
