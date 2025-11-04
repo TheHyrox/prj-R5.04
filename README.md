@@ -1,23 +1,27 @@
 # Code Quality & Testing Evaluation Project
 
 ## Context
+
 You are working for a company that has recently acquired a small e-commerce project. The codebase is functional but lacks proper code quality standards, testing, and modern development practices. Your task is to improve the codebase by implementing various tools and best practices.
 
 ## Git Requirements (Mandatory)
 
 ### 1. Branch Strategy
+
 - ~~Main branch is protected and cannot be pushed to directly~~
 - Must create the following branches:
-  - `feature/eslint-prettier-setup`
-  - `feature/testing-setup`
-  - `feature/git-hooks`
-  - `feature/lighthouse-ci`
+  - [x] `feature/eslint-prettier-setup`
+  - [ ] `feature/testing-setup`
+  - [ ] `feature/git-hooks`
+  - [ ] `feature/lighthouse-ci`
 - Additional features should follow the pattern: `feature/feature-name`
 - Bug fixes should use: `fix/issue-description`
 - Each feature/fix must have its own branch
 
 ### 2. Commit Message Convention
+
 Must follow the Conventional Commits specification:
+
 ```
 <type>[optional scope]: <description>
 
@@ -27,6 +31,7 @@ Must follow the Conventional Commits specification:
 ```
 
 Types:
+
 - `feat`: New feature
 - `fix`: Bug fix
 - `chore`: Changes to build process or auxiliary tools
@@ -38,6 +43,7 @@ Types:
 - `ci`: Changes to CI configuration files and scripts
 
 Examples:
+
 ```
 feat(frontend): add user authentication component
 fix(backend): resolve CORS issue with products API
@@ -48,7 +54,8 @@ chore: update eslint configuration
 ## Main Requirements
 
 ### 1. Code Quality Tools Implementation
-- [ ] Install and configure Prettier with the following requirements:
+
+- [x] Install and configure Prettier with the following requirements:
   - Single quotes
   - No trailing commas
   - 2 spaces indentation
@@ -67,6 +74,7 @@ chore: update eslint configuration
 Remember to make Prettier and ESLint work together!
 
 ### 2. Git Hooks Setup
+
 - [ ] Install and configure Husky
 - [ ] Configure lint-staged
 - [ ] Implement pre-commit hooks:
@@ -78,6 +86,7 @@ Remember to make Prettier and ESLint work together!
   - Check test coverage thresholds
 
 ### 3. Testing Implementation
+
 - [ ] Configure Jest for both packages
 - [ ] Implement test coverage reporting with minimum thresholds:
   - Statements: 80%
@@ -96,6 +105,7 @@ Remember to make Prettier and ESLint work together!
   - Authentication middleware tests
 
 ### 4. Performance Analysis
+
 - [ ] Implement Google Lighthouse CI
 - [ ] Create npm script for running Lighthouse
 - [ ] Set minimum score thresholds:
@@ -107,6 +117,7 @@ Remember to make Prettier and ESLint work together!
 ## Bonus Points
 
 ### 1. Styling Enhancement
+
 - [ ] Implement Tailwind CSS
 - [ ] Add ESLint plugin for Tailwind
 - [ ] Create a proper color scheme and design system
@@ -114,6 +125,7 @@ Remember to make Prettier and ESLint work together!
 - [ ] Add dark mode support
 
 ### 2. Code Quality Enhancements
+
 - [ ] Implement TypeScript
 - [ ] Add ESLint plugins for TypeScript
 - [ ] Add proper error boundaries in React
@@ -122,6 +134,7 @@ Remember to make Prettier and ESLint work together!
 - [ ] Implement proper environment variable handling
 
 ### 3. Additional Features
+
 - [ ] Add product categories
 - [ ] Implement product search
 - [ ] Add product sorting and filtering
@@ -129,6 +142,7 @@ Remember to make Prettier and ESLint work together!
 - [ ] Add user roles (admin/user)
 
 ## Project Setup
+
 ```bash
 # Install dependencies
 npm install
@@ -150,6 +164,7 @@ npm run build
 ```
 
 ## Notes
+
 - Code must follow community standards
 - All tools must be properly configured with appropriate documentation
 - Extra attention will be paid to:
@@ -161,6 +176,7 @@ npm run build
   - Security practices
 
 ## Resources
+
 - [ESLint Documentation](https://eslint.org/)
 - [Prettier Documentation](https://prettier.io/)
 - [Jest Documentation](https://jestjs.io/)
