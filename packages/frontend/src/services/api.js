@@ -24,9 +24,11 @@ export const registerUser = async (userData) => {
 
 export async function getUsers() {
   const token = localStorage.getItem('token');
-  return axios.get(`${API_URL}/auth/users`, {
-    headers: { Authorization: `Bearer ${token}` }
-  }).then(response => response.data);
+  return axios
+    .get(`${API_URL}/auth/users`, {
+      headers: { Authorization: `Bearer ${token}` }
+    })
+    .then((response) => response.data);
 }
 
 export const getProducts = async () => {

@@ -7,47 +7,58 @@ const Register = () => {
     username: '',
     password: '',
     firstname: '',
-    lastname: '',
-  })
-  const [error, setError] = useState('')
-  const navigate = useNavigate()
+    lastname: ''
+  });
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     try {
-      await registerUser(formData)
-      navigate('/products')
+      await registerUser(formData);
+      navigate('/products');
     } catch (err) {
-      setError(err.response?.data?.error || 'Registration failed')
+      setError(err.response?.data?.error || 'Registration failed');
     }
-  }
+  };
 
   const handleChange = (e) => {
-    const { name, value } = e.target
-    setFormData(prev => ({...prev, [name]: value}))
-  }
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   return (
-    <div style={{
-      maxWidth: '400px',
-      margin: '0 auto',
-      padding: '20px',
-      boxShadow: '0 0 10px rgba(0,0,0,0.1)',
-      borderRadius: '8px',
-    }}>
-      <h2 style={{textAlign: 'center', marginBottom: '20px'}}>Register</h2>
-      {error && <div style={{
-        color: 'red',
-        marginBottom: '10px',
-        padding: '10px',
-        backgroundColor: '#ffebee',
-        borderRadius: '4px',
-      }}>{error}</div>}
-      <form onSubmit={handleSubmit} style={{
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '15px',
-      }}>
+    <div
+      style={{
+        maxWidth: '400px',
+        margin: '0 auto',
+        padding: '20px',
+        boxShadow: '0 0 10px rgba(0,0,0,0.1)',
+        borderRadius: '8px'
+      }}
+    >
+      <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>Register</h2>
+      {error && (
+        <div
+          style={{
+            color: 'red',
+            marginBottom: '10px',
+            padding: '10px',
+            backgroundColor: '#ffebee',
+            borderRadius: '4px'
+          }}
+        >
+          {error}
+        </div>
+      )}
+      <form
+        onSubmit={handleSubmit}
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '15px'
+        }}
+      >
         <input
           type="text"
           name="firstname"
@@ -57,7 +68,7 @@ const Register = () => {
           style={{
             padding: '8px',
             borderRadius: '4px',
-            border: '1px solid #ddd',
+            border: '1px solid #ddd'
           }}
         />
         <input
@@ -69,7 +80,7 @@ const Register = () => {
           style={{
             padding: '8px',
             borderRadius: '4px',
-            border: '1px solid #ddd',
+            border: '1px solid #ddd'
           }}
         />
         <input
@@ -81,7 +92,7 @@ const Register = () => {
           style={{
             padding: '8px',
             borderRadius: '4px',
-            border: '1px solid #ddd',
+            border: '1px solid #ddd'
           }}
         />
         <input
@@ -93,7 +104,7 @@ const Register = () => {
           style={{
             padding: '8px',
             borderRadius: '4px',
-            border: '1px solid #ddd',
+            border: '1px solid #ddd'
           }}
         />
         <button
@@ -104,16 +115,18 @@ const Register = () => {
             color: 'white',
             border: 'none',
             borderRadius: '4px',
-            cursor: 'pointer',
+            cursor: 'pointer'
           }}
         >
           Register
         </button>
       </form>
-      <p style={{
-        textAlign: 'center',
-        marginTop: '20px',
-      }}>
+      <p
+        style={{
+          textAlign: 'center',
+          marginTop: '20px'
+        }}
+      >
         Already have an account? <Link to="/login">Login</Link>
       </p>
     </div>
