@@ -11,9 +11,9 @@ You are working for a company that has recently acquired a small e-commerce proj
 - ~~Main branch is protected and cannot be pushed to directly~~
 - Must create the following branches:
   - [x] `feature/eslint-prettier-setup`
-  - [ ] `feature/testing-setup`
-  - [ ] `feature/git-hooks`
-  - [ ] `feature/lighthouse-ci`
+  - [x] `feature/testing-setup`
+  - [x] `feature/git-hooks`
+  - [x] `feature/lighthouse-ci`
 - Additional features should follow the pattern: `feature/feature-name`
 - Bug fixes should use: `fix/issue-description`
 - Each feature/fix must have its own branch
