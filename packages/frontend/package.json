@@ -5,6 +5,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --passWithNoTests",
+    "test:coverage": "react-scripts test --coverage --watchAll=false",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --max-warnings=0 || true",
     "lint:fix": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix"
   },
@@ -31,12 +32,35 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
     "eslint": "*",
     "eslint-config-prettier": "*",
+    "eslint-plugin-jsx-a11y": "*",
+    "eslint-plugin-perfectionist": "*",
     "eslint-plugin-prettier": "*",
     "eslint-plugin-react": "*",
     "eslint-plugin-react-hooks": "*",
-    "eslint-plugin-jsx-a11y": "*",
-    "eslint-plugin-perfectionist": "*"
+    "jest-environment-jsdom": "^27.5.1"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/index.js",
+      "!src/**/__tests__/**",
+      "!**/node_modules/**"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 80,
+        "branches": 60,
+        "functions": 70,
+        "lines": 80
+      }
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!(axios)/)"
+    ]
   }
 }
