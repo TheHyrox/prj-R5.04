@@ -5,25 +5,30 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
-    "test": "echo \"No tests specified\" && exit 0",
+    "test": "jest --passWithNoTests",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
     "lint": "eslint \"src/**/*.{js,ts}\" --max-warnings=0 || true",
     "lint:fix": "eslint \"src/**/*.{js,ts}\" --fix"
   },
   "dependencies": {
-    "express": "^5.1.0",
-    "sqlite3": "^5.1.7",
-    "cors": "^2.8.5",
-    "jsonwebtoken": "^9.0.2",
     "bcryptjs": "^3.0.2",
-    "body-parser": "^2.2.0"
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "sqlite3": "^5.1.7"
   },
   "devDependencies": {
+    "@types/jest": "^30.0.0",
     "eslint": "*",
     "eslint-config-prettier": "*",
-    "eslint-plugin-prettier": "*",
     "eslint-plugin-n": "*",
-    "eslint-plugin-unicorn": "*",
     "eslint-plugin-perfectionist": "*",
-    "nodemon": "^3.1.10"
+    "eslint-plugin-prettier": "*",
+    "eslint-plugin-unicorn": "*",
+    "jest": "^27.5.1",
+    "nodemon": "^3.1.10",
+    "supertest": "^7.1.4"
   }
 }

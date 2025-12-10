@@ -10,11 +10,13 @@ const app = express();
 const requestLog = [];
 const analyticsCache = [];
 
-app.use(cors({
-  origin: '*',
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-}));
+app.use(
+  cors({
+    origin: '*',
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+  })
+);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -86,11 +88,10 @@ const startServer = async () => {
       console.info('SIGTERM signal received.');
       server.close(() => {
         db.closeConnection()
-            .then(() => process.exit(0))
-            .catch(() => process.exit(1));
+          .then(() => process.exit(0))
+          .catch(() => process.exit(1));
       });
     });
-
   } catch (err) {
     console.error('Failed to start server:', err);
     process.exit(1);
